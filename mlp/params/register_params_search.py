@@ -1,0 +1,21 @@
+[xgbr]
+min_child_weight = [15, 16]
+objective = ['reg:squarederror']
+gamma = [0.8, 0.9]
+learning_rate = [0.01, 0.005]
+max_depth = [10, 12]
+subsample = [0.7, 0.8]
+n_estimators = [500, 600]
+
+[lassor]
+alpha = [5e-05, 0.0001, 0.0005]
+selection = ['cyclic']
+tol = [500]
+
+[rfr]
+bootstrap = [True]
+n_estimators = [500, 600]
+max_features = ['sqrt']
+min_samples_split = [5, 6]
+min_impurity_decrease = [0.0008, 0.001]
+
