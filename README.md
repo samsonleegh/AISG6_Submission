@@ -3,9 +3,9 @@ This project is to forecast the hourly number of active users for an e-scooter r
 
 # Models Selection
 The current models selected for training and test in the pipeline are XGBoost Regressor, Lasso Regressor and RandomForest Regressor. As time trend element is present in user demand, the selection of ensembles / regression models are not appropriate unless the target has been stationarised or filtered with a time-series model prior. For our use case, a 24-hr difference during the pre-processing step is taken and stationarity has been tested for.
-Lasso Regressor has been selected for its ability to regularise and tune out explanatory variables with a penalty. This is needed to reduce the presence of multicollinearity problem as variables such as weather and time are highly correlated. For eg. temperature/time/humidity...
-Due to the stationarity of target variable, there is no longer linear relationships between target/explanatory variables. Lasso regressor might suffer from a bad fit and thus perform poorly - to be used as a baseline model. 
-The presence of XGBoost and RandomForest Regressors do not require good linear relationships between explanatory and target variables. As the ensembles of decision trees only filter variables with respect to the stationary target they could ideally learn more effectively and shall be used.
+  Lasso Regressor has been selected for its ability to regularise and tune out explanatory variables with a penalty. This is needed to reduce the presence of multicollinearity problem as variables such as weather and time are highly correlated. For eg. temperature/time/humidity...
+  Due to the stationarity of target variable, there is no longer linear relationships between target/explanatory variables. Lasso regressor might suffer from a bad fit and thus perform poorly - to be used as a baseline model. 
+  The presence of XGBoost and RandomForest Regressors do not require good linear relationships between explanatory and target variables. As the ensembles of decision trees only filter variables with respect to the stationary target they could ideally learn more effectively and shall be used.
 
 # Models Evaluation
 ### Cross-validation scores
