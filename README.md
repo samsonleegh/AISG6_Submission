@@ -1,5 +1,6 @@
 # Project Description
 This project is to forecast the hourly number of active users for an e-scooter rental service in a city with features such as the date and various weather parameters. The project outcome includes a simple machine learning pipeline, the selected best models for 24-hr ahead forecast and the performance metrics.
+Slides: https://docs.google.com/presentation/d/1mzZZ1DqEWvWqrKZmOEoz_r6ogscxJcPQtIf3wTvA37w/edit?usp=sharing
 
 # Models Selection
 The current models selected for training and test in the pipeline are XGBoost Regressor, Lasso Regressor and RandomForest Regressor. As time trend element is present in user demand, the selection of ensembles / regression models are not appropriate unless the target has been stationarised or filtered with a time-series model prior. For our use case, a 24-hr difference during the pre-processing step is taken and stationarity has been tested for.
